@@ -1,0 +1,233 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Menu Styling */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Evenly spaced menu items */
+    background-color: #333; /* Dark grey */
+    padding: 10px;
+}
+
+.menu li {
+    display: inline;
+}
+
+/* Hover effect for menu links */
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px; /* Increased font size for menu */
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions for hover effect */
+}
+
+.menu li a:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #ffdd57; /* Optional: Change text color on hover */
+    transform: scale(1.05); /* Slightly increase the size */
+    border-radius: 10px; /* Optional: Add rounded corners on hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 10%; /* Ensure all time blocks have the same width */
+    height: 50px; /* Fixed height for each block */
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td.green {
+    background-color: #99cc99;
+}
+
+td.spare {
+    background-color: #666; /* Dark grey for spare time */
+    color: #000; /* Black text */
+}
+
+td.dashed {
+    border: 1px dashed #fff;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: block; /* Ensure block display to wrap image */
+    padding: 20px;
+}
+
+/* Main Content Styling */
+.main-content h1 {
+    color: white;
+}
+
+.main-content {
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    font-size: 20px; /* Larger text size */
+}
+
+/* Image Styling for Main Content */
+.main-content img {
+    float: left; /* Float image to the left */
+    margin-right: 20px; /* Margin on right of the image */
+    margin-bottom: 20px; /* Margin below image */
+    max-width: 300px; /* Max width for image */
+    height: auto;
+    border: 2px solid #fff; /* White border around the image */
+}
+
+/* About Me Container */
+.about-me-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/* Blue Box (About Me) */
+#blue-box {
+    background-color: #001f3f; /* Blue background for about me text */
+    padding: 20px;
+    width: 65%;
+    border-radius: 8px;
+}
+
+/* Red Box (Contact Info) */
+#red-box {
+    background-color: rgba(32, 221, 237, 0.65); /* Blue-transparent background for contact info */
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Contact Info Image */
+#red-box img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Additional Text */
+.additional-text {
+    clear: both; /* Clear float from the image */
+    margin-top: 20px;
+    font-size: 20px; /* Larger font size */
+    color: white;
+}
+
+/* Quote Section */
+aside.quote {
+    font-size: 24px; /* Larger font for quote */
+    font-style: italic;
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc; /* Light grey for contrast */
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: #333;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+
+/* Link Styling */
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Phones */
+@media screen and (max-width: 768px) {
+    /* Stack menu items vertically on smaller screens */
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu li a {
+        font-size: 18px; /* Smaller font size for mobile */
+        padding: 8px 15px; /* Reduce padding for better fit */
+    }
+
+    /* Stack the two boxes (about me and contact) vertically */
+    .about-me-container {
+        flex-direction: column;
+    }
+
+    #blue-box, #red-box {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 20px;
+    }
+
+    /* Adjust table layout for smaller screens */
+    table {
+        font-size: 14px; /* Smaller font size for better fit */
+        overflow-x: auto;
+        display: block; /* Scroll horizontally if needed */
+    }
+
+    th, td {
+        padding: 5px;
+        font-size: 12px; /* Smaller font size inside the table */
+    }
+
+    td.green, td.spare {
+        font-size: 10px; /* Further reduce font size for time blocks */
+    }
+}

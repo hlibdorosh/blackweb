@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    padding: 2rem 0;
+}
+
+.main-content h1 {
+    color: white;
+}
+
+.about-me-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#blue-box {
+    background-color: #001f3f; /* Blue background for about me text */
+    padding: 20px;
+    width: 65%;
+    border-radius: 8px;
+}
+
+#red-box {
+    background-color: rgba(32, 221, 237, 0.65); /* Red background for contact info */
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#red-box img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    /* Removed border-radius to keep the image square/rectangular */
+}
+
+.additional-text {
+    margin-top: 2rem;
+    color: white;
+}
+
+.quote {
+    margin-top: 2rem;
+    text-align: center;
+    color: #FFF;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
