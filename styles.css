@@ -15,6 +15,7 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    flex-direction: column; /* Moved from initial CSS */
 }
 
 /* Container */
@@ -39,13 +40,14 @@ header {
     justify-content: space-around; /* Evenly spaced menu items */
     background-color: #333; /* Dark grey */
     padding: 10px;
+    border-radius: 10px;
 }
 
 .menu li {
     display: inline;
 }
 
-/* Hover effect for menu links */
+/* Menu Links */
 .menu li a {
     color: #fff;
     text-decoration: none;
@@ -57,9 +59,19 @@ header {
 
 .menu li a:hover {
     background-color: #555; /* Change background color on hover */
-    color: #ffdd57; /* Optional: Change text color on hover */
+    color: #ffdd57; /* Change text color on hover */
     transform: scale(1.05); /* Slightly increase the size */
-    border-radius: 10px; /* Optional: Add rounded corners on hover */
+    border-radius: 10px; /* Add rounded corners on hover */
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    max-width: 800px; /* Limit the maximum size */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add soft shadow */
 }
 
 /* Table Styling */
@@ -102,14 +114,14 @@ td.dashed {
 }
 
 /* Main Content Styling */
-.main-content h1 {
-    color: white;
-}
-
 .main-content {
     text-align: left; /* Align text to the left */
     padding: 20px;
     font-size: 20px; /* Larger text size */
+}
+
+.main-content h1 {
+    color: white;
 }
 
 /* Image Styling for Main Content */
@@ -146,7 +158,6 @@ td.dashed {
     border-radius: 8px;
 }
 
-/* Contact Info Image */
 #red-box img {
     max-width: 100%;
     margin-bottom: 1rem;
@@ -177,11 +188,25 @@ footer {
     font-size: 16px;
     text-align: center;
     color: white;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Link Styling */
 a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -210,7 +235,8 @@ a:hover {
         flex-direction: column;
     }
 
-    #blue-box, #red-box {
+    #blue-box,
+    #red-box {
         width: 100%; /* Full width for mobile */
         margin-bottom: 20px;
     }
@@ -222,12 +248,70 @@ a:hover {
         display: block; /* Scroll horizontally if needed */
     }
 
-    th, td {
+    th,
+    td {
         padding: 5px;
         font-size: 12px; /* Smaller font size inside the table */
     }
 
-    td.green, td.spare {
+    td.green,
+    td.spare {
         font-size: 10px; /* Further reduce font size for time blocks */
     }
+}
+
+/* Новые стили для маркеров на изображении */
+
+/* Image Container */
+/* Image Container */
+
+/* Image Container */
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+/* Стилизация изображения внутри контейнера */
+.image-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    display: block;
+}
+
+/* Стилизация маркеров */
+.marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+/* Стилизация меток */
+.marker .label {
+    display: none;
+    position: absolute;
+    top: -30px; /* Расположение метки над маркером */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Отображение метки при наведении */
+.marker:hover .label {
+    display: block;
 }
