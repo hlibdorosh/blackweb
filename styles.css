@@ -1,317 +1,304 @@
-/* Global reset */
+@font-face {
+    font-family: 'ExoBold';
+    src: url('Exo-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+} /* Sets the ExoBold font with bold weight */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family: 'ExoBold', sans-serif;
+} /* Resets margins and paddings globally */
 
-/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    font-family: 'ExoBold', sans-serif;
+    background-color: #000;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    flex-direction: column; /* Moved from initial CSS */
-}
+    flex-direction: column;
+} /* Styles the body to be centered, dark, and full height */
 
-/* Container */
 .container {
+    font-family: 'ExoBold', sans-serif !important;
     width: 80%;
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 2rem;
-}
+} /* Creates a centered container with padding */
 
-/* Header */
 header {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     padding: 1rem;
     text-align: center;
-}
+    font-family: 'ExoBold', sans-serif;
+} /* Adds space and centering for the header */
 
-/* Menu Styling */
 .menu {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* Evenly spaced menu items */
-    background-color: #333; /* Dark grey */
-    padding: 10px;
-    border-radius: 10px;
-}
+    justify-content: space-around;
+    background-color: #333;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+} /* Styles the menu to be horizontally spaced and dark */
 
 .menu li {
     display: inline;
-}
+} /* Displays menu items inline */
 
-/* Menu Links */
 .menu li a {
     color: #fff;
     text-decoration: none;
-    font-size: 22px; /* Increased font size for menu */
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions for hover effect */
-}
+    font-size: 1.375rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+} /* Styles menu links with transitions on hover */
 
 .menu li a:hover {
-    background-color: #555; /* Change background color on hover */
-    color: #ffdd57; /* Change text color on hover */
-    transform: scale(1.05); /* Slightly increase the size */
-    border-radius: 10px; /* Add rounded corners on hover */
-}
+    background-color: #555;
+    color: #ffdd57;
+    transform: scale(1.05);
+    border-radius: 0.625rem;
+} /* Changes colors and size slightly on hover */
 
-/* Image Styling */
 img {
     width: 100%;
-    max-width: 800px; /* Limit the maximum size */
+    max-width: 50rem;
     height: auto;
-    margin: 20px 0;
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add soft shadow */
-}
+    margin: 1.25rem 0;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.9375rem rgba(255, 255, 255, 0.2);
+} /* Styles images with rounded corners and a shadow */
 
-/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-}
+    margin: 1.25rem 0;
+} /* Styles the table to be full width and collapse borders */
 
 th, td {
     border: 1px solid #fff;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
-    width: 10%; /* Ensure all time blocks have the same width */
-    height: 50px; /* Fixed height for each block */
-}
+    width: 10%;
+    height: 3.125rem;
+} /* Adds borders and sets fixed cell sizes */
 
 th {
     background-color: #333;
     color: white;
-}
+} /* Makes table headers dark and with white text */
 
 td.green {
     background-color: #99cc99;
-}
+} /* Sets background color for green cells */
+
+td.green:hover {
+    background-color: #81da81;
+    border-radius: 1rem;
+} /* Changes green cells on hover with a slight scale effect */
 
 td.spare {
-    background-color: #666; /* Dark grey for spare time */
-    color: #000; /* Black text */
-}
+    background-color: #666;
+    color: #000;
+} /* Styles spare time cells in dark grey with black text */
 
 td.dashed {
     border: 1px dashed #fff;
-}
+} /* Adds dashed borders to specific cells */
 
-/* Content Wrapper */
+td.dashed:hover {
+    background-color: #1e1d1d;
+    border-radius: 1rem;
+} /* Changes dashed cells on hover with a slight scale effect */
+
 .content-wrapper {
-    display: block; /* Ensure block display to wrap image */
-    padding: 20px;
-}
+    display: block;
+    padding: 1.25rem;
+} /* Adds padding to content wrapper */
 
-/* Main Content Styling */
 .main-content {
-    text-align: left; /* Align text to the left */
-    padding: 20px;
-    font-size: 20px; /* Larger text size */
-}
+    text-align: left;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+} /* Left-aligns main content and increases font size */
 
 .main-content h1 {
     color: white;
-}
+} /* Makes main content headers white */
 
-/* Image Styling for Main Content */
 .main-content img {
-    float: left; /* Float image to the left */
-    margin-right: 20px; /* Margin on right of the image */
-    margin-bottom: 20px; /* Margin below image */
-    max-width: 300px; /* Max width for image */
+    float: left;
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
+    max-width: 18.75rem;
     height: auto;
-    border: 2px solid #fff; /* White border around the image */
-}
+    border: 0.125rem solid #fff;
+} /* Floats images to the left with margins and a white border */
 
-/* About Me Container */
 .about-me-container {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-}
+} /* Layouts the about-me section with space between boxes */
 
-/* Blue Box (About Me) */
 #blue-box {
-    background-color: #001f3f; /* Blue background for about me text */
-    padding: 20px;
+    background-color: #001f3f;
+    padding: 1.25rem;
     width: 65%;
-    border-radius: 8px;
-}
+    border-radius: 0.5rem;
+} /* Styles the blue box with a blue background and padding */
 
-/* Red Box (Contact Info) */
 #red-box {
-    background-color: rgba(32, 221, 237, 0.65); /* Blue-transparent background for contact info */
-    padding: 20px;
+    background-color: rgba(32, 221, 237, 0.65);
+    padding: 1.25rem;
     width: 30%;
     text-align: center;
-    border-radius: 8px;
-}
+    border-radius: 0.5rem;
+} /* Styles the red box with transparency and rounded corners */
 
 #red-box img {
     max-width: 100%;
     margin-bottom: 1rem;
-}
+} /* Sets red box image to be responsive */
 
-/* Additional Text */
 .additional-text {
-    clear: both; /* Clear float from the image */
-    margin-top: 20px;
-    font-size: 20px; /* Larger font size */
+    clear: both;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
     color: white;
-}
+} /* Clears floats and adds space for additional text */
 
-/* Quote Section */
 aside.quote {
-    font-size: 24px; /* Larger font for quote */
+    font-size: 1.5rem;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     text-align: center;
-    color: #ccc; /* Light grey for contrast */
-}
+    color: #ccc;
+} /* Styles the quote section with larger, italic text */
 
-/* Footer */
 footer {
-    margin-top: 30px;
-    padding: 10px 0;
+    margin-top: 1.875rem;
+    padding: 0.625rem 0;
     background-color: #333;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     color: white;
-    border-radius: 10px;
-}
+    border-radius: 0.625rem;
+} /* Styles the footer with dark background and white text */
 
 footer p {
-    margin: 10px 0;
-}
+    margin: 0.625rem 0;
+} /* Adds spacing inside the footer */
 
 footer a {
     color: #ffdd57;
     text-decoration: none;
-}
+} /* Styles footer links in yellow */
 
 footer a:hover {
     text-decoration: underline;
-}
+} /* Adds underline on footer link hover */
 
-/* Link Styling */
 a {
     color: #fff;
     text-decoration: none;
-}
+} /* Sets link color to white globally */
 
 a:hover {
     text-decoration: underline;
-}
+} /* Adds underline when links are hovered */
 
-/* Responsive Design for Phones */
-@media screen and (max-width: 768px) {
-    /* Stack menu items vertically on smaller screens */
+@media screen and (max-width: 48rem) {
     .menu {
         flex-direction: column;
-    }
+    } /* Stacks menu items vertically on smaller screens */
 
     .menu li {
-        margin: 10px 0;
-    }
+        margin: 0.625rem 0;
+    } /* Adds spacing between menu items on mobile */
 
     .menu li a {
-        font-size: 18px; /* Smaller font size for mobile */
-        padding: 8px 15px; /* Reduce padding for better fit */
-    }
+        font-size: 1.125rem;
+        padding: 0.5rem 0.9375rem;
+    } /* Reduces menu link size for mobile */
 
-    /* Stack the two boxes (about me and contact) vertically */
     .about-me-container {
         flex-direction: column;
-    }
+    } /* Stacks the about me and contact boxes vertically on mobile */
 
     #blue-box,
     #red-box {
-        width: 100%; /* Full width for mobile */
-        margin-bottom: 20px;
-    }
+        width: 100%;
+        margin-bottom: 1.25rem;
+    } /* Makes both boxes full width on mobile */
 
-    /* Adjust table layout for smaller screens */
     table {
-        font-size: 14px; /* Smaller font size for better fit */
+        font-size: 0.875rem;
         overflow-x: auto;
-        display: block; /* Scroll horizontally if needed */
-    }
+        display: block;
+    } /* Makes the table scrollable and adjusts font for mobile */
 
-    th,
-    td {
-        padding: 5px;
-        font-size: 12px; /* Smaller font size inside the table */
-    }
+    th, td {
+        padding: 0.3125rem;
+        font-size: 0.75rem;
+    } /* Adjusts padding and font size in table for mobile */
 
     td.green,
     td.spare {
-        font-size: 10px; /* Further reduce font size for time blocks */
-    }
+        font-size: 0.625rem;
+    } /* Further reduces font size in specific table cells for mobile */
 }
 
-/* Новые стили для маркеров на изображении */
-
-/* Image Container */
-/* Image Container */
-
-/* Image Container */
 .image-container {
     position: relative;
     display: inline-block;
-    margin: 20px 0;
-}
+    margin: 1.25rem 0;
+} /* Styles the container for images with markers */
 
-/* Стилизация изображения внутри контейнера */
 .image-container img {
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.9375rem rgba(255, 255, 255, 0.2);
     display: block;
-}
+} /* Makes image responsive with rounded corners and shadow */
 
-/* Стилизация маркеров */
 .marker {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     background-color: red;
-    border: 2px solid white;
+    border: 0.125rem solid white;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    text-decoration: none; /* Убираем подчеркивание ссылок */
-}
+    text-decoration: none;
+} /* Styles the marker on images as a red dot */
 
-/* Стилизация меток */
 .marker .label {
     display: none;
     position: absolute;
-    top: -30px; /* Расположение метки над маркером */
+    top: -1.875rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 5px 8px;
-    border-radius: 4px;
+    padding: 0.3125rem 0.5rem;
+    border-radius: 0.25rem;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 0.875rem;
     z-index: 1;
-}
+} /* Styles the label for markers as a tooltip */
 
-/* Отображение метки при наведении */
 .marker:hover .label {
     display: block;
-}
+} /* Shows the marker label when hovered */
